@@ -1,0 +1,43 @@
+@import url(https://fonts.googleapis.com/css?family=Corbel);
+.input{
+	font-family: 'Corbel' sans-serif;
+	font-size:20px;
+	margin-left:10px;
+	margin-right:10px;
+	border: 2px solid #111111;
+	text-align-last: center;
+	width:35%;
+    background-color:white;
+}
+.logon{
+	font-family: 'Corbel' sans-serif;
+	font-size:20px;
+	border: 2px solid #111111;
+	text-align: center;
+	width: 20%;
+	margin-left:10px;
+	margin-right:10px;
+}
+#cancel {
+    background-color:#ff373e;
+}
+#accept {
+    background-color:lime;
+}
+form {
+	padding-top: 5px;
+	padding-bottom:5px;
+	border: 2px solid #111111;
+	background: rgba(255, 192, 48, 255);
+}
+.formdiv{
+	width: 80%;
+	float: left;
+	position:relative;
+	left:10%;
+	top: 45%;
+}
+body{
+	background-color: #dddddd;
+	text-align:center;
+}

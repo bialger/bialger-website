@@ -1,0 +1,60 @@
+<?php
+	include "./scripts/php/checkAuth.php";
+	checkAuth(0);
+	include "./scripts/php/wanted.php";
+	function show_wanted ($wanted) {
+	    if (count($wanted)==0) {
+	        echo "      <big style='font-size:48px;'>Нет заявок</big>";
+	        return false;
+	    }
+	    else {
+            $par = 100 - 25*count($wanted);
+            if (count($wanted) >= 4) {
+                $par = 3;
+            }
+            $top = $par / 2;
+            echo "\t\t<style>
+            .formdiv {
+                top: $top%;
+            }
+        </style>
+";
+            foreach ($wanted as $want) {
+                if ($want[0] != "" and $want[1] != "" and $want[2] != "" and $want[3] != "") {
+					$sel = array(" ", " ", " ");
+					$sel[(int)$want[2]] = " selected";
+					$msg = '        <div class="formdiv">
+			<form action="/scripts/php/auth_gen.php" method="post">
+				<select name="cat" class="input">
+                    <option'.$sel[0].' value="0">Администратор</option>
+                    <option'.$sel[1].' value="1">Пользователь</option>
+                    <option'.$sel[2].' value="2">"Плохой" пользователь</option>
+                </select>
+                <input type="text" name="email" value="'.$want[3].'" class="input"/><br><br>
+                <input type="text" name="login" value="'.$want[0].'" class="input"/>
+                <input type="text" name="password" value="'.$want[1].'" class="input"/><br><br>
+                <input type="submit" name="logon" value="Accept" id="accept" class="logon"/>
+                <input type="submit" name="logon" value="Cancel" id="cancel" class="logon"/>
+			</form>
+		</div>
+';
+					echo $msg;
+				}
+            }
+            return true;
+        }
+	}
+?>
+<html>
+    <head>
+        <?php
+            include "./scripts/php/html_incl.php";
+            head("Создать пользователя", "style-login.css");
+        ?>
+    </head>
+    <body align="center">
+<?php
+            show_wanted($wanted);
+        ?>
+    </body> 
+</html> 

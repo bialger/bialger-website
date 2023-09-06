@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <?php
+            include "./scripts/php/html_incl.php";
+            head("Запросить участие", "style-login.css");
+        ?>
+    </head>
+    <body align="center">
+        <script type="text/javascript" src="https://bialger.com/scripts/js/validation.js"></script>
+        <div class= "formdiv">
+            <form action="/scripts/php/user_req.php" method="post">
+                <input required type="text" name="login" placeholder="Логин" class="input"/>
+                <input required type="password" name="password" placeholder="Пароль" class="input"/><br><br>
+                <input required type="email" name="email" placeholder="Email" class="input"/>
+                <input type="submit" name="logon" value="Запросить участие" class="logon"/>
+            </form>
+        </div>
+        <?php
+            if (count($_GET) == 1) {
+                echo '<script type="text/javascript"> alert("'.htmlentities($_GET['q'], ENT_QUOTES).'"); window.location.href = "https://bialger.com/user_req.html";</script>'."\n";
+            }
+        ?>
+    </body>
+</html>

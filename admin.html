@@ -1,0 +1,27 @@
+<?php
+	include "./scripts/php/checkAuth.php";
+	checkAuth(0);
+?>
+<html>
+<head>
+	<?php
+	    include "./scripts/php/html_incl.php";
+	    head("Администрация");
+	?>
+</head>
+<body>
+    <p class="bodytitle">
+	    <a name="back">Страница административного функционала</a>
+	</p>
+	<div id="maindiv" class="nohide">
+		<p>
+			На данной странице расположены ссылки на административный функционал<br>
+			<a href="./user_gen.html">Создать пользователя</a><br>
+			<a href="./scripts/php/testmail.php">Тест mail()</a><br>
+			<a href="./scripts/php/testcode.php">Тест кода</a><br>
+			<br>
+			<a href="./main.html">На главную</a><br>
+		</p>
+	</div>
+	</body>
+</html>				

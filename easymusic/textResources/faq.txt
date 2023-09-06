@@ -1,0 +1,8 @@
+1. Q: Is it possible to save the sound to the device in mp3 or other audio format? 
+A: Unfortunately, no, the application was created for educational purposes and aims to explain in simple terms the principle of creating music from sounds and understand if you want to do it. However, you can share music with your friends inside the app by uploading projects to your account. Or, if desired, record music using the built-in screen recording application on your phone, and then extract the audio track from the video in the online service. 
+
+2. Q: What sounds can be uploaded to the app? 
+A: Sounds in mp3, ogg, wav, aac, 3gp or flac format are suitable for download. The length of the sound must not exceed 5.6 seconds. 
+
+3. Q: What should I do if the audio tracks on the screen have shifted relative to each other? 
+A: Scroll all the way to the end or start of the project. To avoid this error, do not scroll audio tracks too abruptly.

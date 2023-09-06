@@ -1,0 +1,37 @@
+<html>
+<head>
+    <?php
+            include "./scripts/php/html_incl.php";
+            head("Неправильно!", "style-login.css");
+        ?>
+</head>
+<body align="center">
+    <br>
+    <h1>
+        В доступе отказано!<br>
+	</h1>
+	<br>
+	<script type="text/javascript" src="https://bialger.com/scripts/js/player.js">play('qa6om6qS2_s', 600, 380);</script>
+	<script type="text/javascript">function play (vId, w, h) {
+	var tag = document.createElement('script');
+	tag.src = "https://www.youtube.com/iframe_api";
+	var firstScriptTag = document.getElementsByTagName('script')[0];
+	firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+	function onYouTubeIframeAPIReady() {
+		player = new YT.Player('video-placeholder', {
+		width: w, height: h, 
+		playerVars: { 'autoplay': 1, 'loop': 1, 'playlist': vId, 'controls': 0, 'showinfo': 0, 'rel': 0},
+		videoId: vId,
+		});
+	}
+}
+play('qa6om6qS2_s', 600, 380);</script>
+    <br>
+    <br>
+    <div class= "formdiv" align="center">
+      <form action="index.html" method="post">  
+        <input type="submit" id="logon" class="logon" value="Попробовать снова">
+     </form>
+    </div>
+</body>
+</html>

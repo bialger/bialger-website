@@ -1,0 +1,84 @@
+<?php
+	include "./scripts/php/checkAuth.php";
+	checkAuth(3);
+?>
+<html>
+<head>
+	<?php
+	    include "./scripts/php/html_incl.php";
+	    head("Главная");
+	    keywords(array("bialger", "программирование", "litrpg"));
+	?>
+</head>
+<body>
+    <nav>
+        <ul class="topmenu" name="back">
+            <li><p class="submenu-link">Перейти</p>
+                <ul class="submenu">
+                    <li><a href="#about">Обо мне</a></li>
+                    <li><a href="#projects">Проекты</a></li>
+                    <li><a href="#links">Прочее</a></li>
+				</ul>
+			</li>
+            <li><p class="submenu-link">Проекты</p>
+                <ul class="submenu">
+					<li><a href="/easymusic.html">EasyMusic</a></li>
+                    <li><a href="/holocron.html">Holocron</a></li>
+                    <li><a href="/crypt0.html">Crypt0</a></li>
+                    <li><a href="/pycl.html">PyClaviature</a></li>
+					<li><a href="/defacto.html">De-facto</a></li>
+					<li><a href="/clav.html">Claviature</a></li>
+				</ul>
+			</li>
+		</ul>
+	</nav>
+	<br>
+    <p class="bodytitle">
+	    <a name="back">Сайт bialger&lsquo;а</a>
+	</p>
+	<?php
+		$mylink = "<p>Слава WAN/МЕХАН! <a href='./admin.html'>К административному функционалу</a>.</p>
+";
+		showSmth($mylink, 0);
+		include "./scripts/php/important.php";
+	?>
+	<div id="maindiv" class="nohide">
+		<hr>
+		<p>
+			<a name="about" class="subtitle">Обо мне</a><br>
+			Приветствую на моем сайте, <?php
+				$hel = array("amice", "φίλε", "friend", "freund");
+				$ch = rand(0, count($hel) - 1);
+				echo $hel[$ch];
+			?>. Я - Александр Бигулов, начинающий программист, астроном и... писатель. 
+			Неожиданно, да? А еще я посредственно знаю латынь (и то забыл половину того, что знал) и еще более посредственно - дренегреческий. 
+			Здесь Вы можете посмотреть информацию о моих проектах, скачать их и... некоторое другое.<br>
+			<?php
+				$myemail = "Мой email: <a href='mailto:artur.bigulov@yandex.ru'>artur.bigulov@yandex.ru</a>. Если будут вопросы или замечания по сайту &mdash; пишите. <br>\n";
+				showSmth($myemail, 2);
+			?>
+			<br>
+			<a href="#back">Назад</a>
+		</p>
+		<hr>
+		<p>
+			<a name="projects" class="subtitle">Мои проекты</a><br>
+			<a href="/easymusic.html">EasyMusic</a> &mdash; программа на языке Kotlin на Android для создания музыки из звуков для начинающих.<br>
+			<a href="/holocorn.html">Holocron</a> &mdash; программа на языке Python, базированная на Crypt0, для еще более надежного шифрования файлов.<br>
+			<a href="/crypt0.html">Crypt0</a> &mdash; программа на языке Python для абсолютно надежного шифрования файлов.<br>
+			<a href="/pycl.html">PyClaviature</a> &mdash; программа на языке Python для перевода раскладки с консольным интрфейсом.<br>
+			<a href="/defacto.html">De-facto</a> &mdash; программа на языке Python для распознания фотошопа.<br>
+			<a href="/clav.html">Claviature</a> &mdash; программа на языке Java для перевода раскладки с графическим интерфейсом.<br>
+			<br>
+        	<a href="#back">Назад</a>
+		</p> 
+		<hr>
+		<p>
+        	<a name="other" class="subtitle">Прочее</a><br>
+        	А еще я писательствую потихоньку. <?php showSmth('<a target="_blank" href="https://author.today/u/a_bigulov">Вот</a>', 2); if (!checkUser(2)) echo 'Вот';?> моя первая попытка в жанре LitRPG. Почитайте, прокомментируйте, если не трудно. Каждый лайк и каждая подписка приближают проду. А в естественном виде они нечасто, но что делать &mdash; другие дела у меня тоже есть. Так-то.
+        	<br>
+        	<a href="#back">Назад</a>
+		</p>
+	</div>
+	</body>
+</html>				
