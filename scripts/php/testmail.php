@@ -20,10 +20,10 @@
 ?>
 <html>
     <head>
-        <link rel="icon" sizes="32x32" type="image/png" href="https://yt3.ggpht.com/a/AATXAJwNdGwTvJkJt7H-vq8OP-zUQULu7co4wKhQlg=s900-c-k-c0xffffffff-no-rj-mo">
-        <title>Тест mail()</title>
-        <meta charset="utf-8">
-        <link rel="stylesheet" type="text/css" href="/style/style.css">
+        <?php
+            include "./html_incl.php";
+            head("Тест mail()", "style.css");
+        ?>
     </head>
     <body>
         <style>@import url(https://fonts.googleapis.com/css?family=Corbel);</style>
