@@ -32,6 +32,7 @@
         "Ваша заявка отклонена",
         "Упс! К сожалению, Ваша заявка на присоединение к сообществу bialger.com отклонена!\r\nВаш желаемый логин: $slogin, ваш желаемый пароль: $spassw.\r\nНе расстраивайтесь."
         );
+		header('Location: https://bialger.com/user_gen.html');
 	}
 	$ndata = rmstr($data, $slogin);
 	fwrite($file1, $ndata);
