@@ -1,6 +1,10 @@
 <?php
     function inpath () {
-        $uri = $_SERVER['REQUEST_URI'];
+        $raw_uri = $_SERVER['REQUEST_URI'];
+        $uri = stristr($raw_uri, "?", true);
+        if (stristr($raw_uri, '?') === false) {
+            $uri = $raw_uri;
+        }
         $inpath = "";
         $ar_uri = explode("/", $uri);
         switch (count($ar_uri)) {
@@ -56,7 +60,10 @@
 		return $auth;
 	}
 	function checkAuth ($acc) {
-		if (!checkUser($acc)) header('Location: https://bialger.com/index.html?retpath='.$_SERVER['REQUEST_URI']);
+		if (!checkUser($acc)) {
+			header('Location: https://bialger.com/index.html?retpath='.$_SERVER['REQUEST_URI']);
+			die();
+		}
 	}
 	function showSmth ($str, $acc) {
 		if (checkUser($acc)) echo $str;
