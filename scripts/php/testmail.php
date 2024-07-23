@@ -1,6 +1,6 @@
 <?php
-	include "./hashes.php";
-	include "./hash_eq.php";
+    include "./hashes.php";
+    include "./hash_eq.php";
     include "./checkAuth.php";
     include "./mail.php";
     checkAuth(0);
@@ -28,12 +28,9 @@
     <body>
         <style>@import url(https://fonts.googleapis.com/css?family=Corbel);</style>
         <p class="bodytitle">Тест mail()</p>
-        <p><?php if (isset($mail)){
-            echo '<script> alert("'.$mail.'");';
+        <p><?php if (isset($mail)) {
+            echo '<script> alert("'.$mail.'");</script>';
         }?></p>
-        <?php if (isset($mail)){
-            header('Location: https://bialger.com/scripts/php/testmail.php');
-        }?>
         <p>
             <form style="margin-left:3%;font-family:'Corbel' sans-serif;font-size:18px;" method="post">
                 <select style="font-family:'Corbel' sans-serif;font-size:18px;width:20%" name="email">
@@ -46,6 +43,6 @@
                 <textarea required style="font-family:'Corbel' sans-serif;font-size:18px;width:97%;height:50%;" name="text"></textarea><br><br>
                 <input style="font-family:'Corbel' sans-serif;font-size:18px;width:20%" type="submit" name="logon" value="Послать"/>
             </form>
-		</p>
+        </p>
     </body> 
 </html>
