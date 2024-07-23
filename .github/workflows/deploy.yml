@@ -1,0 +1,14 @@
+name: "CI/CD Deploy"
+
+on: [ push ]
+
+jobs:
+  memory-leaks:
+    name: Deploy the bialger.com (except for EasyMusic backend)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Run refresh script
+        run: |
+          curl -X POST -F "login=${{ secrets.ADMIN_LOGIN }}" -F "password=${{ secrets.ADMIN_PASSWORD }}" https://bialger.com/scripts/php/refresh.php
