@@ -20,7 +20,7 @@
         }
     }
     if ($auth) {
-		$filenames = array("index.html"); # TODO: enlarge
+		$filenames = array("admin.html", "clav.html", "crypt0.html", "defacto.html","easymusic.html", "holocorn.html", "holocron.html", "incorrect.html", "index.html", "main.html", "pycl.html", "user_gen.html", "user_req.html", "err/400.html", "err/403.html", "err/404.html", "err/500.html", "err/index.html", "scripts/index.html", "scripts/js/index.html", "scripts/js/player.js", "scripts/js/validation.js", "scripts/php/auth_gen.php", "scripts/php/dblib.php", "scripts/php/hash_eq.php", "scripts/php/html_incl.php", "scripts/php/index.html", "scripts/php/message.php", "scripts/php/testcode.php", "scripts/php/user_req.php", "scripts/php/auth.php", "scripts/php/checkAuth.php", "scripts/php/guest.php", "scripts/php/important.php", "scripts/php/mail.php", "scripts/php/refresh.php", "scripts/php/testmail.php", "style/index.html", "style/style.css", "style/style-login.css"); # TODO: enlarge
 		foreach($filenames as $filename) {
             $file = fopen("../../".$filename, "w");
             fwrite($file, file_get_contents("https://raw.githubusercontent.com/bialger/bialger-website/master/".$filename));
