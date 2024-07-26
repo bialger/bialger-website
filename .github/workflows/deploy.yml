@@ -16,3 +16,5 @@ jobs:
       - name: Run refresh script
         run: |
           curl -X POST -F "login=${{ secrets.ADMIN_LOGIN }}" -F "password=${{ secrets.ADMIN_PASSWORD }}" https://bialger.com/scripts/php/refresh.php
+          sleep 1m
+          curl -X POST -F "login=${{ secrets.ADMIN_LOGIN }}" -F "password=${{ secrets.ADMIN_PASSWORD }}" https://bialger.com/scripts/php/refresh.php
