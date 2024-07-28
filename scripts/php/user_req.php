@@ -1,11 +1,11 @@
 <?php
     include "./wanted.php";
-	include "./hashes.php";
-	include "./mail.php";
-	include "./dblib.php";
+    include "./hashes.php";
+    include "./mail.php";
+    include "./dblib.php";
     $slogin = htmlentities($_POST['login'], ENT_QUOTES);
-	$spassw = htmlentities($_POST['password'], ENT_QUOTES);
-	$semail = htmlentities($_POST['email'], ENT_QUOTES);
+    $spassw = htmlentities($_POST['password'], ENT_QUOTES);
+    $semail = htmlentities($_POST['email'], ENT_QUOTES);
     function checkUniq ($wanted, $hashes, $slogin) {
         $uniq = true;
         foreach ($wanted as $want) {
@@ -33,7 +33,7 @@
         "Вы оставили заявку",
         "Поздравляем! Вы оставили заявку на присоединение к сообществу bialger.com с логином '$slogin' и паролем '$spassw'"
         );
-		header('Location: https://bialger.com/index.html');
+        header('Location: https://bialger.com/index.html');
     }
     else {
         $msg = 'К сожалению, логин '.$slogin.' уже занят. Выберите, пожалуйста, другой.';

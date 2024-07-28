@@ -1,6 +1,6 @@
 <?php
-	include "./hashes.php";
-	include "./hash_eq.php";
+    include "./hashes.php";
+    include "./hash_eq.php";
     include "./checkAuth.php";
     checkAuth(0);
     $do = true;
@@ -16,11 +16,11 @@
 ?>
 ";
     if ((count($_POST) == 2) && $do) {
-	    $text = $_POST['code'];
-	    $file = fopen($filename, "w");
-	    fwrite($file, $gate.$text);
-	    fclose($file);
-	    header('Location: https://bialger.com/scripts/php/'.$filename);
+        $text = $_POST['code'];
+        $file = fopen($filename, "w");
+        fwrite($file, $gate.$text);
+        fclose($file);
+        header('Location: https://bialger.com/scripts/php/'.$filename);
     }
 ?>
 <html>
@@ -46,11 +46,11 @@
                     else {
                         $file_tmp = fopen($filename, "w");
                         fwrite($file_tmp, $gate);
-	                    fclose($file_tmp);
+                        fclose($file_tmp);
                     }
                 ?></textarea><br><br>
                 <input style="font-family:'Corbel' sans-serif;font-size:18px;width:20%" type="submit" name="logon" value="Протестировать"/>
             </form>
-		</p>
+        </p>
     </body> 
 </html> 

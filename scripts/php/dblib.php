@@ -34,14 +34,14 @@
         if ($comment == "default") {
             $date = date("d M Y D H:i:s", time());
             $insert = "
-		array($strarr), //$date
-	);
+        array($strarr), //$date
+    );
 ?>";
         }
         else {
             $insert = "
-		array($strarr), //$comment
-	);
+        array($strarr), //$comment
+    );
 ?>";
         }
         $outstr = substr($instr, 0, (strlen($instr) - 7)).$insert;

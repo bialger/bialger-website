@@ -20,11 +20,11 @@
         }
     }
     if ($auth) {
-		$filenames = array("auth.php", "checkAuth.php", "download_current_app.php", "get_friend_info.php", "get_project.php", "mail.php", "prove_login.php", "useful.php", "auth_gen.php", "change_info.php", "dblib.php", "get_info.php", "hash_eq.php", "index.html", "upload_project.php", "user_req.php", "textResources/faq.txt", "textResources/terms.txt", "textResources/tutorial.txt", "textResources/version.txt");
-		foreach($filenames as $filename) {
+        $filenames = array("auth.php", "checkAuth.php", "download_current_app.php", "get_friend_info.php", "get_project.php", "mail.php", "prove_login.php", "useful.php", "auth_gen.php", "change_info.php", "dblib.php", "get_info.php", "hash_eq.php", "index.html", "upload_project.php", "user_req.php", "textResources/faq.txt", "textResources/terms.txt", "textResources/tutorial.txt", "textResources/version.txt");
+        foreach($filenames as $filename) {
             $file = fopen("../../easymusic/".$filename, "w");
             fwrite($file, file_get_contents("https://raw.githubusercontent.com/bialger/easymusic-backend/master/".$filename));
             fclose($file);
         }
-	}
+    }
 ?> 

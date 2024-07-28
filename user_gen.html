@@ -1,13 +1,13 @@
 <?php
-	include "./scripts/php/checkAuth.php";
-	checkAuth(0);
-	include "./scripts/php/wanted.php";
-	function show_wanted ($wanted) {
-	    if (count($wanted)==0) {
-	        echo "      <big style='font-size:48px;'>Нет заявок</big>";
-	        return false;
-	    }
-	    else {
+    include "./scripts/php/checkAuth.php";
+    checkAuth(0);
+    include "./scripts/php/wanted.php";
+    function show_wanted ($wanted) {
+        if (count($wanted)==0) {
+            echo "      <big style='font-size:48px;'>Нет заявок</big>";
+            return false;
+        }
+        else {
             $par = 100 - 25*count($wanted);
             if (count($wanted) >= 4) {
                 $par = 3;
@@ -21,11 +21,11 @@
 ";
             foreach ($wanted as $want) {
                 if ($want[0] != "" and $want[1] != "" and $want[2] != "" and $want[3] != "") {
-					$sel = array(" ", " ", " ");
-					$sel[(int)$want[2]] = " selected";
-					$msg = '        <div class="formdiv">
-			<form action="/scripts/php/auth_gen.php" method="post">
-				<select name="cat" class="input">
+                    $sel = array(" ", " ", " ");
+                    $sel[(int)$want[2]] = " selected";
+                    $msg = '        <div class="formdiv">
+            <form action="/scripts/php/auth_gen.php" method="post">
+                <select name="cat" class="input">
                     <option'.$sel[0].' value="0">Администратор</option>
                     <option'.$sel[1].' value="1">Пользователь</option>
                     <option'.$sel[2].' value="2">"Плохой" пользователь</option>
@@ -35,15 +35,15 @@
                 <input type="text" name="password" value="'.$want[1].'" class="input"/><br><br>
                 <input type="submit" name="logon" value="Accept" id="accept" class="logon"/>
                 <input type="submit" name="logon" value="Cancel" id="cancel" class="logon"/>
-			</form>
-		</div>
+            </form>
+        </div>
 ';
-					echo $msg;
-				}
+                    echo $msg;
+                }
             }
             return true;
         }
-	}
+    }
 ?>
 <html>
     <head>
@@ -53,7 +53,7 @@
         ?>
     </head>
     <body align="center">
-<?php
+        <?php
             show_wanted($wanted);
         ?>
     </body> 
