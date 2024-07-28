@@ -1,5 +1,5 @@
 <?php
-    $show = true;
+    $show = false;
     $head = "ВНИМАНИЕ!";
     $text = 'Тестовое объявление.';
 ?>
