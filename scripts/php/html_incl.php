@@ -12,6 +12,6 @@
             $str .= $elem.", ";
         }
         $str = substr($str, 0, (strlen($str) - 2));
-        echo '<meta name="Keywords" content="'.$str.'">'."\n";
+        echo '        <meta name="Keywords" content="'.$str.'">'."\n";
     }
 ?>
