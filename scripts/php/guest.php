@@ -8,4 +8,5 @@
     else {
         header('Location: https://bialger.com/main.html');
     }
+    die();
 ?>

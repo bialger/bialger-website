@@ -36,4 +36,5 @@
     }
     $ndata = rmstr($data, $slogin);
     fwrite($file1, $ndata);
+    die();
 ?>

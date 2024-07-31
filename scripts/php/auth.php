@@ -19,18 +19,19 @@
             }
         }
     }
-	if ($auth) {
-		setcookie ("user-bialger", $login, time()+(86400), "/");
-		setcookie ("passw-bialger", $passw, time()+(86400), "/");
-		setcookie ("lid-bialger", $login_id, time()+(86400), "/");
-		if ((count($_GET) >= 1) and isset($_GET['retpath'])) {
-		    header('Location: https://bialger.com/'.substr($_GET['retpath'], 1));
-		}
-		else {
+    if ($auth) {
+        setcookie ("user-bialger", $login, time()+(86400), "/");
+        setcookie ("passw-bialger", $passw, time()+(86400), "/");
+        setcookie ("lid-bialger", $login_id, time()+(86400), "/");
+        if ((count($_GET) >= 1) and isset($_GET['retpath'])) {
+            header('Location: https://bialger.com/'.substr($_GET['retpath'], 1));
+        }
+        else {
             header('Location: https://bialger.com/main.html');
-		}
-	}
-	else {
-		header('Location: https://bialger.com/incorrect.html');
-	}
+        }
+    }
+    else {
+        header('Location: https://bialger.com/incorrect.html');
+    }
+    die();
 ?>

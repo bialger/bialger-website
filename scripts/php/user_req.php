@@ -39,4 +39,5 @@
         $msg = 'К сожалению, логин '.$slogin.' уже занят. Выберите, пожалуйста, другой.';
         header('Location: https://bialger.com/user_req.html?q='.$msg);
     }
+    die();
 ?>

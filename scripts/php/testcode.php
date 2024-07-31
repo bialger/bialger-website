@@ -21,6 +21,7 @@
         fwrite($file, $gate.$text);
         fclose($file);
         header('Location: https://bialger.com/scripts/php/'.$filename);
+        die();
     }
 ?>
 <html>
