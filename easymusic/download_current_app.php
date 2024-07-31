@@ -2,16 +2,17 @@
     if (isset($_GET['type'])) {
         $type = htmlentities($_GET['type']);
         if ($type == "Alpha") {
-            header('Location: https://disk.yandex.ru/d/n2TH7Px8KByRLg'); # 1.0.4
+            header('Location: https://github.com/bialger/circle21-music/releases/download/v1.0.5/EasyMusic-1.0.4-alpha.apk'); # 1.0.4
         }
         else if ($type == "Beta") {
-            header('Location: https://disk.yandex.ru/d/8T2nEOnSAal7VQ'); # 1.0.5
+            header('Location: https://github.com/bialger/circle21-music/releases/download/v1.0.5/EasyMusic-1.0.5-beta.apk'); # 1.0.5
         }
         else {
-            header('Location: https://disk.yandex.ru/d/T1p4FIzzbn_b0Q'); # 1.0.0
+            header('Location: https://github.com/bialger/circle21-music/releases/download/v1.0.5/EasyMusic-1.0-stable.apk'); # 1.0.0
         }
     }
     else {
-        header('Location: https://disk.yandex.ru/d/T1p4FIzzbn_b0Q'); # 1.0.0
+        header('Location: https://github.com/bialger/circle21-music/releases/download/v1.0.5/EasyMusic-1.0-stable.apk'); # 1.0.0
     }
+    die();
 ?>

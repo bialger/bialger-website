@@ -2,7 +2,7 @@ Greetings, aspiring musician! Thank you for choosing our application. Below you 
 
 
 1) Loading Sounds 
-To create a project, you will need a basic set of sounds that you will work with. You can work with the sounds that are already in the application, or upload your own. To do this, from the main screen, click the Sounds button to go to the sounds download menu. When you press the ADD button, you will be prompted to select the sounds in the phone's memory to load into the application. Once added, these sounds will be located in the list of Custom sounds. 
+To create a project, you will need a basic set of sounds that you will work with. You can work with the sounds that are already presented in the application, or upload your own. To do this, from the main screen, click the Sounds button to go to the sounds download menu. When you press the ADD button, you will be prompted to select the sounds in the phone's memory to load into the application. Once added, these sounds will be located in the list of Custom sounds. 
 
 2) Creating a project 
 To create a new project, go to the main screen and click on the button in the upper right corner of the screen. In the drop-down list, select New project, in the window that appears, enter the name of the project and click New project. A new empty project will be created with your name. 
