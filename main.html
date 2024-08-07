@@ -57,7 +57,7 @@
                 Если вы хотите сообщить о баге или предложить какую-то идею по сайту &mdash; создавайте <a target="_blank" href="https://github.com/bialger/bialger-website/issues">issue</a> 
                 в GitHub-репозитории.
                 <?php
-                    $myemail = "Мой email: <a href='mailto:".secrets["owner-email"]."'>".secrets["owner-email"]."</a>. Если будут вопросы &mdash; пишите. <br>\n";
+                    $myemail = "Мой email: <a href='mailto:".$secrets["owner-email"]."'>".$secrets["owner-email"]."</a>. Если будут вопросы &mdash; пишите. <br>\n";
                     showSmth($myemail, 2);
                 ?>
                 <br>
@@ -82,7 +82,7 @@
                 <a name="other" class="subtitle">Прочее</a>
                 <br>
                 А еще я писательствую потихоньку. <?php 
-                    showSmth('<a target="_blank" href="'.secrets["literature-link"].'">Вот тут</a>', 2); 
+                    showSmth('<a target="_blank" href="'.$secrets["literature-link"].'">Вот тут</a>', 2); 
                     if (!checkUser(2)) {
                         echo 'Вот тут';
                     }
