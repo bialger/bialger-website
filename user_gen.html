@@ -3,17 +3,18 @@
     checkAuth(0);
     include "./scripts/php/wanted.php";
     function show_wanted ($wanted) {
-        if (count($wanted)==0) {
-            echo "      <big style='font-size:48px;'>Нет заявок</big>";
+        echo count($wanted);
+        if (count($wanted) == 0) {
+            echo "        <big style='font-size:48px;'>Нет заявок</big>";
             return false;
         }
         else {
-            $par = 100 - 25*count($wanted);
+            $par = 100 - 25 * count($wanted);
             if (count($wanted) >= 4) {
                 $par = 3;
             }
             $top = $par / 2;
-            echo "\t\t<style>
+            echo "        <style>
             .formdiv {
                 top: $top%;
             }
@@ -39,6 +40,13 @@
         </div>
 ';
                     echo $msg;
+                } else {
+                    echo "      <big style='font-size:48px;'>В заявке ошибка.</big>";
+                    echo "      <p>"
+                    echo "          Содержимое:\n          "
+                    print_r($want);
+                    echo "      </p>"
+                    return false;
                 }
             }
             return true;
