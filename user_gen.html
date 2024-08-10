@@ -3,9 +3,8 @@
     checkAuth(0);
     include "./scripts/php/wanted.php";
     function show_wanted ($wanted) {
-        echo count($wanted);
         if (count($wanted) == 0) {
-            echo "        <big style='font-size:48px;'>Нет заявок</big>";
+            echo "<big style='font-size:48px;'>Нет заявок</big>";
             return false;
         }
         else {
@@ -14,7 +13,7 @@
                 $par = 3;
             }
             $top = $par / 2;
-            echo "        <style>
+            echo "<style>
             .formdiv {
                 top: $top%;
             }
