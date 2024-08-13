@@ -1,4 +1,7 @@
 <?php
+    include "./hashes.php";
+    include "./hash_eq.php";
+    include "./secrets.php";
     $do = true;
     $auth = false;
     foreach ($_POST as $post) {
@@ -9,9 +12,7 @@
         $spassw = htmlentities($_POST['password']);
         $login = hash("sha512", $slogin);
         $passw = hash("sha512", $spassw);
-        $login_id = hash("sha512", $_SERVER['HTTP_USER_AGENT'].$_SERVER['REMOTE_ADDR']);
-        include "./hashes.php";
-        include "./hash_eq.php";
+        $login_id = hash("sha512", $_SERVER['HTTP_USER_AGENT'].$secrets["lid-code"]);
         foreach ($hashes as $hashp) {
             if (hash_equals($hashp[0], $login) && hash_equals($hashp[1], $passw)){
                 $auth = true;

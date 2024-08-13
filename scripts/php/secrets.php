@@ -1,6 +1,7 @@
 <?php
     $secrets = array(
         "owner-email" => "",
-        "literature-link" => ""
+        "literature-link" => "",
+        "lid-code" => ""
     );
 ?> 

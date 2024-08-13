@@ -32,6 +32,7 @@
         $inpath = inpath();
         include $inpath."hashes.php";
         include $inpath."hash_eq.php";
+        include $inpath."secrets.php";
         $cn = "user-bialger";
         $cu = "passw-bialger";
         $cl = "lid-bialger";
@@ -50,7 +51,7 @@
                 }
             }
             else $access = 3;
-            if (!hash_equals($login_id, hash("sha512", $_SERVER['HTTP_USER_AGENT'].$_SERVER['REMOTE_ADDR']))) $access = 4;
+            if (!hash_equals($login_id, hash("sha512", $_SERVER['HTTP_USER_AGENT'].$secrets["lid-code"]))) $access = 4;
         }
         return $access;
     }
