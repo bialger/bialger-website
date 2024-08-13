@@ -4,4 +4,4 @@
         "literature-link" => "",
         "lid-code" => ""
     );
-?> 
+?>
